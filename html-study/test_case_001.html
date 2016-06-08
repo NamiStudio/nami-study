@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试标题</title>
+    <script>
+        alert("我是标题");
+    </script>
+</head>
+<body id="xiaowei">
+<p id="daodaoliang">我是测试自然段数据</p>
+<button  id='nami' type="button" onclick="test_function()">我是按钮</button >
+<script>
+    var test_function = function test_function() {
+
+        var temp_name = new Object();
+        temp_name.mother = 'xiaowei';
+        temp_name.father = 'daodaoliang';
+        temp_name.daugher = 'nami';
+        global_test = temp_name.daugher;
+        document.write(temp_name.father);
+        document.write(temp_name['daugher']);
+
+    };
+    temp_switch = 'abc';
+    switch (temp_switch){
+        case 'abc':
+            alert(temp_switch);
+            break;
+    }
+
+    temp_arrsy = ['1', '2'];
+    for (var index = 0;index <temp_arrsy.length;index++){
+        alert(temp_arrsy[index])
+    }
+
+    for (var item in temp_arrsy){
+        document.write(item + '<br />')
+    }
+
+    document.getElementById('daodaoliang').onclick = test_function;
+    var parent = document.getElementById('xiaowei');
+    var child = document.getElementById('nami');
+    parent.removeChild(child);
+
+</script>
+</body>
+<body>
+我是局外的body
+</body>
+<script>
+    test_var = 1;
+    alert('23333333333333333');
+</script>
+</html>

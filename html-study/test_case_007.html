@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_case_007</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+    <h1 id="h1001"></h1>
+    <script>
+        var test_array_1 = ["hello", "nami", ["hello", " daughter"]];
+        $("#h1001").html(test_array_1[2]);
+        document.write('<br/>');
+        var test_array_2 = ["hello", "daodaoliang"];
+        document.write(String(test_array_1.concat(test_array_2)).big());
+        document.write('<br/>');
+        document.write(test_array_1.join());
+        document.write('<br/>');
+        document.write(test_array_2.join('-'));
+    </script>
+</body>
+</html>

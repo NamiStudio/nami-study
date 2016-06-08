@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_case_003</title>
+</head>
+<body onload="checkCookie()">
+    <p>
+        这里是cookie操作的示例，该示例是在浏览器端设置和读取cookie；
+    </p>
+</body>
+<script>
+    function checkCookie() {
+        var temp_name = getCookie("username");
+        if (temp_name == '' || temp_name == null){
+            temp_name = prompt("请输入你的名字", 'nami');
+            if(temp_name != '' && temp_name != null){
+                setCookie("username", temp_name, 60);
+            }
+        }else {
+            alert("welcome " + temp_name);
+        }
+    }
+    function setCookie(name, value, expiredays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + expiredays)
+        document.cookie = name + '=' + encodeURIComponent(value) + ((expiredays == null) ? "" : ";expires=" +exdate.toGMTString())
+    }
+    function getCookie(name) {
+        if(document.cookie.length > 0){
+            c_start = document.cookie.indexOf(name+'=');
+            if(c_start!=-1){
+                c_start += name.length + 1;
+                c_end = document.cookie.indexOf(';',c_start);
+                if(c_end == -1) {
+                    c_end = document.cookie.length;
+                }
+                return decodeURIComponent(document.cookie.substring(c_start, c_end));
+            }
+        }
+    }
+</script>
+</html>

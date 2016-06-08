@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_case_005</title>
+</head>
+<body>
+<h1 id="h01"></h1>
+<p>
+    我就是知道我还能存在不
+</p>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+    function testFunction() {
+        $("#h01").html("hello jQuery").attr("style", "color:red");
+    }
+    $(document).ready(testFunction);
+//    testFunction();
+</script>
+</html>

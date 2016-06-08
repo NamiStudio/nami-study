@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_case_002</title>
+</head>
+<body>
+<button id="nami" onclick="timeCount()">我是按钮啊</button>
+</body>
+<script>
+    var temp_float = Math.floor(Math.random()*11);
+    alert("随机数:" + temp_float);
+</script>
+<script>
+    var test_regexp = new RegExp('test');
+    document.write(String(test_regexp.exec("wo shi test001 code")));
+    document.write(String(1920 || 1925 || 1955))
+    window.open("http://www.baidu.com");
+</script>
+<script>
+    confirm("我是小白啊");
+</script>
+<script>
+    prompt("我是另外的小白啊", "我是默认值");
+</script>
+<script>
+    function timeCount() {
+        var date = Date.now();
+        document.getElementById('nami').innerHTML = date.toString()
+        setTimeout("timeCount()", 1000);
+    }
+</script>
+</html>
